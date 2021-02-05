@@ -1,6 +1,6 @@
 from math import floor
 
-BOARDSIZE = 8
+BOARD_SIZE = 8
 
 chessboard = (
         "-", "-", "-", "-", "-", "-", "-", "-", "-", "-",
@@ -31,7 +31,7 @@ PIECE_SYMBOLS = {
     ".": "."
 }
 
-def printboard(brd):
+def print_board(brd):
     """
     A function that prints the board showing the piece occupying the square with notation printed along the side of the board.\n
 
@@ -42,12 +42,12 @@ def printboard(brd):
       - If there is a piece, the appropriate piece will be printed.
     """
 
-    row_num = BOARDSIZE
+    row_num = BOARD_SIZE
 
     square_num = 0
     for square in brd:
         if square != "-":   
-            current_row = BOARDSIZE - floor(square_num/BOARDSIZE)
+            current_row = BOARD_SIZE - floor(square_num/BOARD_SIZE)
             #Prints the row number for the first row
             if square_num == 0:
                 print(row_num, end=' ')
@@ -60,6 +60,6 @@ def printboard(brd):
 
     #Prints the file letter
     print("\n ", end = " ")
-    for i in range(BOARDSIZE):            
+    for i in range(BOARD_SIZE):            
         print(f"{FILE_LETTERS[i]} ", end =" ")
     print("")

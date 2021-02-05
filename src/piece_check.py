@@ -71,7 +71,7 @@ def rook_check(array_location, end_array_location, available_moves, distance_mov
     #Iterates over every possible rook move
     for move in available_moves:
         #Iterates over all the rows the rook can possibly move on
-        for i in range(1, board.BOARDSIZE):
+        for i in range(1, board.BOARD_SIZE):
             #Checks to see if the index is within the tuple
             if (array_location + (i * move)) < 99 and (array_location + (i * move)) > 20:
                 #Checks if every square along the row is blank or if the end square can be captured
@@ -106,7 +106,7 @@ def bishop_check(array_location, end_array_location, available_moves, distance_m
     #Iterates over every possible bishop move
     for move in available_moves:
         #Iterates over all the rows the bishop can possibly move on
-        for i in range(1, board.BOARDSIZE):
+        for i in range(1, board.BOARD_SIZE):
             #Checks to see if the index is within the tuple
             if (array_location + (i * move)) < 99 and (array_location + (i * move)) > 20:
                 #Checks if every square along the row is blank or if the end square can be captured
@@ -265,7 +265,7 @@ def queen_check(array_location, end_array_location, available_moves, distance_mo
     #Iterates over every possible queen move
     for move in available_moves:
         #Iterates over all the rows the queen can possibly move on
-        for i in range(1, board.BOARDSIZE):
+        for i in range(1, board.BOARD_SIZE):
             #Checks to see if the index is within the tuple
             if (array_location + (i * move)) < 99 and (array_location + (i * move)) > 20:
                 #Checks if every square along the row is blank or if the end square can be captured
